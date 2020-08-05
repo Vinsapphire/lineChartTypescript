@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "2021-ai-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,18 +8,27 @@
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "axios": "^0.19.2",
+    "chart.js": "^2.9.3",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
     "react": "^16.13.1",
+    "react-chartjs-2": "^2.10.0",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
     "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "typesafe-actions": "^5.1.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start:fe": "react-scripts start",
+    "start:server": "node server/index.js",
+    "start": "concurrently \"npm run start:server\" \"npm run start:fe\""
   },
   "eslintConfig": {
     "extends": "react-app"
